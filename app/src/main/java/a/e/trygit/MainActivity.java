@@ -57,6 +57,14 @@ private RequestQueue mQueue;
                       String name = person.getString("name");
                       String username = person.getString("username");
                       String email = person.getString("email");
+                      String street =  person.getJSONObject("address").getString("street");
+                      String suite = person.getJSONObject("address").getString("suite");
+                      String city = person.getJSONObject("address").getString("city");
+                      String zipcode = person.getJSONObject("address").getString("zipcode");
+                      float lat = person.getJSONObject("address").getJSONObject("geo").getInt("lat");
+                      float lng = person.getJSONObject("address").getJSONObject("geo").getInt("lng");
+
+                      mTextViewResult.append(id+ " "+ name + " "+ username+ " "+email+ " "+street+ " "+suite+" "+city+ " "+zipcode+" "+lat+" "+lng);
 
                   }
 
@@ -71,6 +79,7 @@ private RequestQueue mQueue;
 
             }
         });
+        mQueue.add(request);
     }
 
 }

@@ -13,10 +13,16 @@
         android:textSize="20sp"
         android:textColor="@android:color/black"
 />
+
     <Button
         android:id="@+id/buttonParse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Parse"
-/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="212dp"
+        android:text="Parse" />
 </RelativeLayout>
